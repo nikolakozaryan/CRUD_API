@@ -34,6 +34,7 @@ export const MESSAGES: CodeMessages = {
 };
 
 export const REQUIRED_KEYS = ['username', 'age', 'hobbies'];
+export const BASIC_URL = 'http://localhost';
 
 type CodeMessages = {
   [key: string]: CodeType;
