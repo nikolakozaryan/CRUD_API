@@ -37,8 +37,8 @@ export const createUser: HandlerType = (req, res) => {
     return;
   }
 
-  const user = req.body as IServerUser;
-  storage.add({ ...user, id: uuidv4() });
+  const user = { ...req.body, id: uuidv4() } as IServerUser;
+  storage.add(user);
   sendResponse(req, res, 'CREATED', user);
 };
 
