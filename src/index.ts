@@ -14,7 +14,7 @@ const MODE = process.env.NODE_ENV;
 const PORT = +(process.env.PORT as string);
 const numCPUs = cpus().length;
 
-export const app = new App();
+const app = new App();
 app.use(parseUrl);
 app.addRouter(userRouter);
 
