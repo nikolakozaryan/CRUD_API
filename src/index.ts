@@ -1,14 +1,14 @@
 import * as dotenv from 'dotenv';
-import http from 'http';
+import { parseUrl } from './middlewares/parseUrl';
+import { App } from './modules/App/App';
+import { userRouter } from './user-router';
+
 dotenv.config();
+const PORT = process.env.PORT as string;
 
-const { PORT } = process.env;
-
-const server = http.createServer(function (req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.end(`<h1 style='color:red'>Hello</h1>`);
-});
-
-server.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
+const app = new App();
+app.use(parseUrl);
+app.addRouter(userRouter);
+app.listen(+PORT, () => {
+  console.log(`Server started on PORT ${PORT}`);
 });
