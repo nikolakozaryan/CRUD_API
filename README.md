@@ -26,7 +26,11 @@ npm run start:dev
 ```
 npm run start:prod
 ```
-3. App is running on port, specified in `.env` file.
+3. To start the app in multiple instances mode (run multiple instances of the app with nodemon)
+```
+npm run start:multi
+```
+4. App is running on port, specified in `.env` file.
 ```
 localhost:PORT
 ```
