@@ -30,7 +30,11 @@ npm run start:prod
 ```
 npm run start:multi
 ```
-4. App is running on port, specified in `.env` file.
+4. To test the app
+```
+npm run test
+```
+5. App is running on port, specified in `.env` file.
 ```
 localhost:PORT
 ```
