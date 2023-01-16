@@ -26,10 +26,13 @@ npm run start:dev
 ```
 npm run start:prod
 ```
+3. App is running on port, specified in `.env` file.
+```
+localhost:PORT
+```
 ## API
 
-Implemented endpoint:  
-`api/users`
+Implemented endpoint: `api/users`
 
 Methods:
 
