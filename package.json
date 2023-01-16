@@ -5,7 +5,8 @@
   "main": "./src/index.ts",
   "scripts": {
     "start:dev": "cross-env NODE_ENV=development npx nodemon",
-    "start:prod": "cross-env NODE_ENV=production webpack --mode production && node ./dist/"
+    "start:prod": "cross-env NODE_ENV=production webpack --mode production && node ./dist/",
+    "start:multi": "cross-env NODE_ENV=multi npx nodemon"
   },
   "repository": {
     "type": "git",
