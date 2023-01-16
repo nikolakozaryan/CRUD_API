@@ -61,7 +61,7 @@ export const updateUser: HandlerType = (req, res) => {
   const user = req.body as IServerUser;
   const updated = storage.update(user_id, user);
   updated
-    ? sendResponse(req, res, 'CREATED', { ...user, id: user_id })
+    ? sendResponse(req, res, 'SUCCESS', { ...user, id: user_id })
     : sendResponse(req, res, 'USER_NOT_FOUND');
 };
 
